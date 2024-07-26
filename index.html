@@ -6,15 +6,27 @@
     <title>我的导航站</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components.css">
+    <!-- 引入 LXGW WenKai 字体 -->
+    <link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-webfont@1.1.0/lxgwwenkai-regular.css">
     <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'LXGW WenKai', serif; /* 使用 LXGW WenKai 字体 */
+        }
+        /* 可选：在 CSS 文件中添加暗黑模式切换的样式 */
+        .dark {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+        }
+    </style>
 </head>
 <body class="dark">
     <canvas id="canvas-basic"></canvas> <!-- 渐变背景 -->
     <div id="content-wrapper">
         <header>
             <div class="avatar-container">
-                <img src="14704202@2x.gif" alt="头像" class="avatar">
+                <img src="14704202@2x.webp" alt="头像" class="avatar">
             </div>
             <div class="custom-text">
                 一条咸鱼🐟君
@@ -28,13 +40,14 @@
                     <li><a href="https://space.bilibili.com/476349531" target="_blank"><i class="fab fa-bilibili"></i> Bilibili</a></li>
                     <li><a href="https://www.saltedfishjun.top/" target="_blank"><i class="fas fa-blog"></i> 个人博客</a></li>
                     <li><a href="https://image.saltedfishjun.top/" target="_blank"><i class="fa-regular fa-image"></i> 个人图床</a></li>
-                    <li><a href="https://alist.saltedfishjun.top" target="_blank"><i class="fas fa-cloud"></i> 云盘</a></li> <!-- 新添加的云盘链接 -->
+                    <li><a href="https://alist.saltedfishjun.top" target="_blank"><i class="fas fa-cloud"></i> 云盘</a></li>
+                    <li><a href="https://read.saltedfishjun.top" target="_blank"><i class="fa-solid fa-book"></i> 阅读</a></li>
                 </ul>
             </nav>
         </main>
     </div>
     <footer>
-        <a href="https://icp.gov.moe/?keyword=20243809" target="_blank">萌ICP备20243809号</a>
+        <p>&copy; <a href="https://icp.gov.moe/?keyword=20243809" target="_blank">萌ICP备20243809号</a></p>
     </footer>
     <script src="https://npm.elemecdn.com/granim@2.0.0/dist/granim.min.js"></script>
     <script src="js/components.js"></script>
