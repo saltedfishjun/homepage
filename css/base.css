@@ -65,7 +65,8 @@ header {
     border-radius: 50%; /* 圆形头像 */
     object-fit: cover; /* 确保图片完全覆盖容器 */
     border: 3px solid rgba(255, 255, 255, 0.1); /* 半透明边框 */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 头像阴影 */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3) inset; /* 外部和内部阴影模拟突起效果 */
+    /* 外部阴影使头像看起来从背景中突起，内部阴影增强立体感 */
     animation: rotate 20s linear infinite; /* 缓慢旋转动画 */
 }
 
@@ -77,6 +78,32 @@ header {
     to {
         transform: rotate(360deg);
     }
+}
+
+/* 自定义文本样式 */
+.custom-text {
+    margin-top: 10px; /* 头像和文字之间的间距 */
+    color: #000; /* 自定义文字颜色 */
+    font-size: 25px; /* 默认文字大小 */
+    text-align: center; /* 文本居中对齐 */
+    position: relative;
+}
+
+/* 自定义横线样式 */
+.line {
+    margin-top: 10px; /* 文字和横线之间的间距 */
+    width: 90%; /* 横线的宽度，百分比表示相对父元素 */
+    height: 2px; /* 横线的中间部分的粗细 */
+    background: linear-gradient(to right, 
+        rgba(0, 0, 0, 0) 0%, /* 透明开始 */
+        rgba(0, 0, 0, 0) 10%, /* 透明逐渐变细的部分 */
+        rgba(0, 0, 0, 1) 50%, /* 中间1px的粗细 */
+        rgba(0, 0, 0, 0) 90%, /* 透明逐渐变细的部分 */
+        rgba(0, 0, 0, 0) 100% /* 透明结束 */
+    ); 
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; /* 使横线在父元素内部居中 */
 }
 
 /* 内容区域样式 */
@@ -119,13 +146,13 @@ nav ul {
     margin: 0;
     display: flex;
     flex-wrap: wrap; /* 按钮换行 */
-    gap: 10px; /* 每排按钮的间距 */
+    gap: 25px; /* 每排按钮的间距 */
     justify-content: center; /* 居中对齐 */
 }
 
 /* 每个按钮的样式 */
 nav ul li {
-    flex: 0 0 100px; /* 设置按钮宽度为100px */
+    flex: 0 0 120px; /* 设置按钮宽度为100px */
 }
 
 /* 按钮样式 */
@@ -134,7 +161,7 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     padding: 5px 0; /* 上下内边距 */
-    width: 125px; /* 设置按钮宽度为100px */
+    width: 150px; /* 设置按钮宽度为100px */
     height: 50px;
     text-decoration: none;
     font-weight: bold;
@@ -152,7 +179,7 @@ nav ul li a {
 /* 图标样式 */
 nav ul li a i {
     margin-right: 5px; /* 图标与文本之间的间距 */
-    margin-left: 1%; /* 图标距离按钮左边的间距 */
+    margin-left: 3%; /* 图标距离按钮左边的间距 */
 }
 
 /* 链接的悬停效果 */
